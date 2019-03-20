@@ -7,7 +7,8 @@ module.exports = {
     // 入口起点
     entry: {
         // app: './src/main.jsx',
-        app: './src/Game.jsx',
+        // app: './src/Game.jsx',
+        app: './src/helloworld.jsx',
     },
     // 输出
     output: {
