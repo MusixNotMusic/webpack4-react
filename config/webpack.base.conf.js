@@ -6,9 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     // 入口起点
     entry: {
-        // app: './src/main.jsx',
-        // app: './src/Game.jsx',
-        app: './src/helloworld.jsx',
+        // app: './src/helloworld.jsx',
+        app: './src/routers/index.jsx',
+        // app: './src/main.tsx',
     },
     // 输出
     output: {

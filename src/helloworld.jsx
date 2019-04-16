@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './styles/my.css';
-class Helloworld extends React.Component {
+export class Helloworld extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -22,7 +22,7 @@ class Helloworld extends React.Component {
     }
 
     render(){
-        return <h1> hello, {this.formatName()}</h1>;
+        return (<div><h1> hello, {this.formatName()}</h1></div>);
     }
 }
 
