@@ -1,45 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { render } from "react-dom";
-import { Helloworld } from "../helloworld.jsx"
+// import { Helloworld } from "../helloworld.jsx";
+import { NavTest } from "../components/nav.jsx";
+import { Index } from '../components/index.jsx';
+import { SimpleGrid } from "../components/simpleGrid.jsx";
+import { FlexGrid } from "../components/flexGrid.jsx";
+import { CssGrid } from "../components/cssGrid.jsx";
+import '../styles/index.scss';
 
-function Index() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
-
+const routes = [
+    {path:'/index', linkName:'home', extra:true, component: Index },
+    {path:'/simple', linkName:'simpleGrid', component:  SimpleGrid},
+    {path:'/flex', linkName:'flexGrid', component:  FlexGrid},
+    {path:'/css', linkName:'cssGrid', component:  CssGrid},
+]
 function AppRouter() {
+ const MyRoutes = routes.map( (route, index) => <Route path={route.path} component={route.component} extra={route.extra} key={index}/>)
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about/">About</Link>
-            </li>
-            <li>
-              <Link to="/users/">Users</Link>
-            </li>
-            <li>
-              <Link to="/hello/">Hello</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Route path="/" exact component={Index} />
-        <Route path="/about/" component={About} />
-        <Route path="/users/" component={Users} />
-        <Route path="/hello/" component={Helloworld} />
+        <NavTest links={routes}></NavTest>
+        {MyRoutes}
       </div>
     </Router>
   );

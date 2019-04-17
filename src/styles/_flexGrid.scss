@@ -1,0 +1,13 @@
+.flex_wrapper {
+    padding-right: 2.08333333%;
+    .row {
+        display: flex;
+    }
+    .col {
+        margin-left: 2.08333333%;
+        margin-bottom: 1em;
+        width: 6.25%;
+        flex: 1 1 auto;
+        background: rgb(255, 150, 150);
+    }
+}
