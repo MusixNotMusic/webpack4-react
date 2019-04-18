@@ -7,6 +7,7 @@ import { Index } from '../components/index.jsx';
 import { SimpleGrid } from "../components/simpleGrid.jsx";
 import { FlexGrid } from "../components/flexGrid.jsx";
 import { CssGrid } from "../components/cssGrid.jsx";
+import { SimpleMulticalArticle } from "../components/multicolArticle.jsx";
 import '../styles/index.scss';
 
 const routes = [
@@ -14,6 +15,7 @@ const routes = [
     {path:'/simple', linkName:'simpleGrid', component:  SimpleGrid},
     {path:'/flex', linkName:'flexGrid', component:  FlexGrid},
     {path:'/css', linkName:'cssGrid', component:  CssGrid},
+    {path:'/simpleArticle', linkName:'simpleArticle', component:  SimpleMulticalArticle},
 ]
 function AppRouter() {
  const MyRoutes = routes.map( (route, index) => <Route path={route.path} component={route.component} extra={route.extra} key={index}/>)
