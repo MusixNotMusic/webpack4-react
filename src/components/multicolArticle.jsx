@@ -65,7 +65,7 @@ export class SimpleMulticalArticle extends React.Component {
                 </div>
 
                 <div className="simple_article_container_4" id="simple_article_container_4">
-                    <div class="card">
+                    <div className="card">
                         <h2>I am the heading</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                                     vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
@@ -73,7 +73,7 @@ export class SimpleMulticalArticle extends React.Component {
                                     vel, viverra egestas ligula.</p>
                     </div>
 
-                    <div class="card">
+                    <div className="card">
                         <h2>I am the heading</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                                     vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
@@ -81,22 +81,14 @@ export class SimpleMulticalArticle extends React.Component {
                                     vel, viverra egestas ligula.</p>
                     </div>
 
-                    <div class="card">
+                    <div className="card">
                         <h2>I am the heading</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                                     vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                                     tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
                                     vel, viverra egestas ligula.</p>
                     </div>
-                    <div class="card">
-                        <h2>I am the heading</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                                    vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                                    tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                                    vel, viverra egestas ligula.</p>
-                    </div>
-
-                    <div class="card">
+                    <div className="card">
                         <h2>I am the heading</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                                     vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
@@ -104,7 +96,7 @@ export class SimpleMulticalArticle extends React.Component {
                                     vel, viverra egestas ligula.</p>
                     </div>
 
-                    <div class="card">
+                    <div className="card">
                         <h2>I am the heading</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                                     vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
@@ -112,7 +104,15 @@ export class SimpleMulticalArticle extends React.Component {
                                     vel, viverra egestas ligula.</p>
                     </div>
 
-                    <div class="card">
+                    <div className="card">
+                        <h2>I am the heading</h2>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                                    vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                                    tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                                    vel, viverra egestas ligula.</p>
+                    </div>
+
+                    <div className="card">
                         <h2>I am the heading</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                                     vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies

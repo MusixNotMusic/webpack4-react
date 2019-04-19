@@ -1,0 +1,11 @@
+.syntax_code {
+    .container {
+        display: flex;
+        flex-flow: row;
+        textarea {
+            width: 50%;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+    }
+}
