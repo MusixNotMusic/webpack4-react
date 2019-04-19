@@ -90,6 +90,7 @@ import {
     xcode,
     xt256,
     zenburn } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import _ from 'lodash';
 
 const toCamelCaseVar = (variable) => 
     variable.replace(/(\_|\-)+[a-zA-Z]/g,
@@ -198,7 +199,8 @@ export class syntaxHighlight extends React.Component{
 
     handleChange(e){
         e.preventDefault();
-        this.setState({mode: hlList[e.target.value].mode})
+        let index = _.findIndex(hlList, (o)=>{ return o.name === e.target.value});
+        this.setState({mode: hlList[index].mode})
     }
 
     handleClick(e) {
