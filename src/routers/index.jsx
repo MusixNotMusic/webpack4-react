@@ -9,6 +9,7 @@ import { FlexGrid } from "../components/flexGrid.jsx";
 import { CssGrid } from "../components/cssGrid.jsx";
 import { SimpleMulticalArticle } from "../components/multicolArticle.jsx";
 import { syntaxHighlight } from "../components/syntaxHighlight.jsx";
+import { TreeExample } from "../components/fileTreeDemo.jsx";
 import '../styles/index.scss';
 
 const routes = [
@@ -18,6 +19,7 @@ const routes = [
     {path:'/css', linkName:'cssGrid', component:  CssGrid},
     {path:'/simpleArticle', linkName:'simpleArticle', component:  SimpleMulticalArticle},
     {path:'/highlight', linkName:'syntaxHighlight', component:  syntaxHighlight},
+    {path:'/tree', linkName:'tree', component: TreeExample}
 ]
 function AppRouter() {
  const MyRoutes = routes.map( (route, index) => <Route path={route.path} component={route.component} extra={route.extra} key={index}/>)

@@ -91,7 +91,8 @@ import {
     xt256,
     zenburn } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import _ from 'lodash';
-
+import axios from 'axios';
+import qs from 'qs';
 const toCamelCaseVar = (variable) => 
     variable.replace(/(\_|\-)+[a-zA-Z]/g,
     (str,index) => index ? str.substr(-1).toUpperCase() : str)
@@ -188,13 +189,21 @@ const hlList = [
     {mode: zenburn, name: "zenburn" }
 ];
 
+
 export class syntaxHighlight extends React.Component{
     constructor(props){
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleCodeChange = this.handleCodeChange.bind(this);
+        this.handleUpload = this.handleUpload.bind(this);
         this.state = {showLine: true, mode: rainbow, codeString:''};
+    }
+
+    componentDidMount(){
+        axios.get('http://localhost:3300/test.js').then((res) => {
+            this.setState({codeString: res.data});
+        })
     }
 
     handleChange(e){
@@ -215,6 +224,15 @@ export class syntaxHighlight extends React.Component{
         this.setState({codeString: e.target.value})
     }
 
+    handleUpload(e) {
+        e.preventDefault();
+        let codeString = this.state.codeString;
+        console.log('codeString ==>', codeString);
+        axios.post('http://localhost:5500/file/code/upload',
+            qs.stringify({ codeString: codeString })
+        )
+    }
+
     render() {
         const options = hlList.map((styles,index) => { return <option key={index}>{styles.name}</option> });
         return (
@@ -229,6 +247,7 @@ export class syntaxHighlight extends React.Component{
                         {this.state.codeString}
                     </SyntaxHighlighter>
                 </div>
+                <button onClick={this.handleUpload}>upload</button>
             </div>
         )
     }

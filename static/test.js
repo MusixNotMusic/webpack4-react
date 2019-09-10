@@ -3,8 +3,8 @@ import Router from 'koa-router';
 import serve from 'koa-static';
 import path from 'path';
 // 参数
-const port = 3300;
-const staticPath = '../static/'
+const port = 5500;
+const staticPath = '../static/';
 
 // 注册路由 controller
 const enrollRoute = require('./router/index.js');

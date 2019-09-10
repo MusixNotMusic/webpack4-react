@@ -490,6 +490,14 @@ aws4@^1.8.0:
   resolved "http://r.cnpmjs.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=
 
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "http://r.cnpmjs.org/axios/download/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
+
 babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "http://r.cnpmjs.org/babel-code-frame/download/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -1527,6 +1535,11 @@ bytes@3.0.0:
   version "3.0.0"
   resolved "http://r.cnpmjs.org/bytes/download/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
   integrity sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg=
+
+bytes@^2.5.0:
+  version "2.5.0"
+  resolved "http://r.cnpmjs.org/bytes/download/bytes-2.5.0.tgz#4c9423ea2d252c270c41b2bdefeff9bb6b62c06a"
+  integrity sha1-TJQj6i0lLCcMQbK97+/5u2tiwGo=
 
 cacache@^11.0.2, cacache@^11.2.0:
   version "11.3.2"
@@ -2833,7 +2846,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.3.0:
   version "1.7.0"
   resolved "http://r.cnpmjs.org/follow-redirects/download/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
   integrity sha1-SJ68GY3A5/ZBZ70jsDxMGbV4THY=
@@ -3419,6 +3432,11 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "http://r.cnpmjs.org/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+humanize-number@0.0.2:
+  version "0.0.2"
+  resolved "http://r.cnpmjs.org/humanize-number/download/humanize-number-0.0.2.tgz#11c0af6a471643633588588048f1799541489c18"
+  integrity sha1-EcCvakcWQ2M1iFiASPF5lUFInBg=
 
 iconv-lite@0.4.23:
   version "0.4.23"
@@ -4024,6 +4042,16 @@ koa-is-json@^1.0.0:
   version "1.0.0"
   resolved "http://r.cnpmjs.org/koa-is-json/download/koa-is-json-1.0.0.tgz#273c07edcdcb8df6a2c1ab7d59ee76491451ec14"
   integrity sha1-JzwH7c3Ljfaiwat9We52SRRR7BQ=
+
+koa-logger@^3.2.0:
+  version "3.2.0"
+  resolved "http://r.cnpmjs.org/koa-logger/download/koa-logger-3.2.0.tgz#8aef64d8b848fb6253a9b31aa708d0e05141f0e6"
+  integrity sha1-iu9k2LhI+2JTqbMapwjQ4FFB8OY=
+  dependencies:
+    bytes "^2.5.0"
+    chalk "^1.1.3"
+    humanize-number "0.0.2"
+    passthrough-counter "^1.0.0"
 
 koa-router@^7.4.0:
   version "7.4.0"
@@ -5087,6 +5115,11 @@ pascalcase@^0.1.1:
   version "0.1.1"
   resolved "http://r.cnpmjs.org/pascalcase/download/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
+
+passthrough-counter@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.cnpmjs.org/passthrough-counter/download/passthrough-counter-1.0.0.tgz#1967d9e66da572b5c023c787db112a387ab166fa"
+  integrity sha1-GWfZ5m2lcrXAI8eH2xEqOHqxZvo=
 
 path-browserify@0.0.0:
   version "0.0.0"

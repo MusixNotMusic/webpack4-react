@@ -18,7 +18,13 @@ module.exports = merge(baseWebpackConfig, {
         inline: true, // 设置为true，当源文件改变时会自动刷新页面
         hot: true, // 模块热更新，取决于HotModuleReplacementPlugin
         host: '127.0.0.1', // 设置默认监听域名，如果省略，默认为“localhost”
-        port: 8703 // 设置默认监听端口，如果省略，默认为“8080”
+        port: 8777, // 设置默认监听端口，如果省略，默认为“8080”
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3300',
+                changeOrigin: true
+            }
+        }
     },
     module: {
         rules: [{
@@ -49,4 +55,4 @@ module.exports = merge(baseWebpackConfig, {
     optimization: {
         nodeEnv: 'development',
     }
-});
+})
