@@ -1,0 +1,55 @@
+.quickSort-box {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    .quickSort-item {
+        display: inline-block;
+        // padding: 5px;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        color: steelblue;
+        text-align: center;
+        margin-right: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quickSort-arrow-bottom {
+        position: absolute;
+        bottom: -9px;
+        left: 103px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 8px solid #4c81f4;
+    }
+
+    .quickSort-arrow-top {
+        position: absolute;
+        top: -9px;
+        left: 13px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 8px solid #f7be11;
+    }
+
+    .quickSort-arrow-tail {
+        position: absolute;
+        top: -9px;
+        left: 13px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 8px solid #e34339;
+    }
+}
+.margin-top-30px{
+    margin-top: 30px;
+}

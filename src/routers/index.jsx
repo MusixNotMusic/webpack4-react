@@ -10,6 +10,7 @@ import { CssGrid } from "../components/cssGrid.jsx";
 import { SimpleMulticalArticle } from "../components/multicolArticle.jsx";
 import { syntaxHighlight } from "../components/syntaxHighlight.jsx";
 import { TreeExample } from "../components/fileTreeDemo.jsx";
+import { quickSort } from "../components/quickSort.jsx";
 import '../styles/index.scss';
 
 const routes = [
@@ -19,7 +20,8 @@ const routes = [
     {path:'/css', linkName:'cssGrid', component:  CssGrid},
     {path:'/simpleArticle', linkName:'simpleArticle', component:  SimpleMulticalArticle},
     {path:'/highlight', linkName:'syntaxHighlight', component:  syntaxHighlight},
-    {path:'/tree', linkName:'tree', component: TreeExample}
+    {path:'/tree', linkName:'tree', component: TreeExample},
+    {path:'/sort', linkName:'sort', component: quickSort}
 ]
 function AppRouter() {
  const MyRoutes = routes.map( (route, index) => <Route path={route.path} component={route.component} extra={route.extra} key={index}/>)

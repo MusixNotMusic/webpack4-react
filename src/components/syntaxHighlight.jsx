@@ -201,7 +201,7 @@ export class syntaxHighlight extends React.Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3300/test.js').then((res) => {
+        axios.get('http://localhost:5500/test.js').then((res) => {
             this.setState({codeString: res.data});
         })
     }
