@@ -44,6 +44,7 @@ function inflx2Surfix(expList) {
         }else if(item === rightRound) {
             matchLeft();
         }
+        console.log('inflx2Surfix ==>', l, sop, i);
         i++;
     }
     fall();
@@ -54,7 +55,6 @@ function operationCompare(src) {
     let top = sop.length - 1;
     while(top >= 0 && operationReg.test(sop[top])){
         if(priorityCompare(src, sop[top])){
-            sop.push(src);
             break;
         } else {
             l.push(sop.pop());
@@ -112,11 +112,11 @@ function doCompute (operator, num1, num2) {
 // ================= run =================
 let expList = preprocess(str);
 inflx2Surfix(expList);
-// let _arr = l.slice();
-// let result = calculate(0, _arr, 0, _arr.length)
+let _arr = l.slice();
+let result = calculate(0, _arr, 0, _arr.length)
 console.log('l ==>', l);
 console.log('sop ==>', sop);
 console.log('eval', eval(str));
-// console.log('result', result, _arr);
+console.log('result', result, _arr);
 
 
