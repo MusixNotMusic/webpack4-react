@@ -8,11 +8,6 @@ let numberReg    = /^\d+$/;
 let operationReg = /^(\+|\-|\*|\/)$/;
 let leftRound    = '(';
 let rightRound   = ')';
-
-// let str1 = '(12+5)/2*5-(8-10)';
-let str1 = '(50/2+44*(33-11))/5-88';
-let str = process.argv[2] || str1;
-console.log('process.argv[2] ==>', process.argv[2]);
 // 优先级
 let priority = {
     '+': 1,
@@ -151,18 +146,20 @@ function _random(first, last) {
 // ================= run =================
 
 function check(str) {
+    console.log('str', str);
+    console.log('str lenth', str.length);
     let expList = preprocess(str);
     inflx2Surfix(expList);
     let _arr = l.slice();
     let result = calculate(0, _arr, 0, _arr.length)
     let r1 = eval(str);
-    console.log('str', str);
+    // console.log('str', str);
     console.log('eval', r1);
     console.log('result', result, _arr);
     console.log('has equel', r1 === result);
 }
 
-check(random_operation_str_code(1000));
+check(random_operation_str_code(10000));
 
 
 
