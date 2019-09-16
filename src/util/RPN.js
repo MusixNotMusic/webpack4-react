@@ -82,12 +82,26 @@ function priorityCompare(src, dist) {
     return priority[src] > priority[dist];
 }
 
+// function calculate(result, arr ,start, len) {
+//     while(start < len) {
+//         if(operationReg.test(arr[start])) {
+//             result = doCompute(arr[start], arr[start-2], arr[start-1]);
+//             arr.splice(start - 2, 3, result);
+//             return calculate(result, arr, 0, arr.length);
+//         } 
+//         start++;
+//     }
+//     return result;
+// }
+
 function calculate(result, arr ,start, len) {
     while(start < len) {
         if(operationReg.test(arr[start])) {
             result = doCompute(arr[start], arr[start-2], arr[start-1]);
             arr.splice(start - 2, 3, result);
-            return calculate(result, arr, 0, arr.length);
+            start = 0;
+            len = arr.length;
+            continue;
         } 
         start++;
     }
@@ -117,13 +131,13 @@ function check(str) {
 
 function random_operation_str_code(size) {
     let operator = ['+', '-', '*', '/'];
-    let first_fator = _random(10, 1000);
+    let first_fator = _random(10, 100);
     for(let i = 0; i < size; i++) {
         // 用于前缀 后缀 计算
         let rand_branch = _random(0, 1);
         // 是否有括号
         let has_round = _random(0, 1);
-        let factor = _random(10, 1000);
+        let factor = _random(10, 100);
         let oprt = operator[_random(0, 3)];
         if(rand_branch) {
             first_fator = `${first_fator}${oprt}${factor}`;
@@ -152,14 +166,14 @@ function check(str) {
     inflx2Surfix(expList);
     let _arr = l.slice();
     let result = calculate(0, _arr, 0, _arr.length)
-    let r1 = eval(str);
+    // let r1 = eval(str);
     // console.log('str', str);
-    console.log('eval', r1);
+    // console.log('eval', r1);
     console.log('result', result, _arr);
-    console.log('has equel', r1 === result);
+    // console.log('has equel', r1 === result);
 }
 
-check(random_operation_str_code(10000));
+check(random_operation_str_code(15000));
 
 
 
