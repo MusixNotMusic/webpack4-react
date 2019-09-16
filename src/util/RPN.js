@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const process = require('process');
 let l = [];     //运算数字
 let sop = [];   //运算符
@@ -44,7 +45,7 @@ function inflx2Surfix(expList) {
         }else if(item === rightRound) {
             matchLeft();
         }
-        console.log('inflx2Surfix ==>', l, sop, i);
+        // console.log('inflx2Surfix ==>', l, sop, i);
         i++;
     }
     fall();
@@ -108,15 +109,61 @@ function doCompute (operator, num1, num2) {
     }
 }
 
+function check(str) {
+    let expList = preprocess(str);
+    inflx2Surfix(expList);
+    let _arr = l.slice();
+    let result = calculate(0, _arr, 0, _arr.length)
+    console.log('eval', eval(str));
+    console.log('result', result, _arr);
+    process.exit();
+}
+
+
+function random_operation_str_code(size) {
+    let operator = ['+', '-', '*', '/'];
+    let first_fator = _random(10, 1000);
+    for(let i = 0; i < size; i++) {
+        // 用于前缀 后缀 计算
+        let rand_branch = _random(0, 1);
+        // 是否有括号
+        let has_round = _random(0, 1);
+        let factor = _random(10, 1000);
+        let oprt = operator[_random(0, 3)];
+        if(rand_branch) {
+            first_fator = `${first_fator}${oprt}${factor}`;
+        } else { //前缀
+            first_fator = `${factor}${oprt}${first_fator}`;
+        }
+        if(has_round) {
+            first_fator = '('+first_fator+')';
+        }
+    }
+    return first_fator;
+}
+
+function _random(first, last) {
+    let base = first;
+    let offset = last - first;
+    return Math.round((base + offset * Math.random()));
+}
 
 // ================= run =================
-let expList = preprocess(str);
-inflx2Surfix(expList);
-let _arr = l.slice();
-let result = calculate(0, _arr, 0, _arr.length)
-console.log('l ==>', l);
-console.log('sop ==>', sop);
-console.log('eval', eval(str));
-console.log('result', result, _arr);
+
+function check(str) {
+    let expList = preprocess(str);
+    inflx2Surfix(expList);
+    let _arr = l.slice();
+    let result = calculate(0, _arr, 0, _arr.length)
+    let r1 = eval(str);
+    console.log('str', str);
+    console.log('eval', r1);
+    console.log('result', result, _arr);
+    console.log('has equel', r1 === result);
+}
+
+check(random_operation_str_code(1000));
+
+
 
 
