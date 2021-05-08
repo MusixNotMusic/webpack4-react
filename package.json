@@ -48,7 +48,7 @@
     "@types/react-syntax-highlighter": "^10.1.0",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "lodash-es": "^4.17.11",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
